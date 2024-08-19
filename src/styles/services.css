@@ -1,0 +1,97 @@
+body{
+    min-height: 100vh;
+    display: grid;
+}
+
+.hero{
+    align-self: start;
+}
+
+.footerWrapper{
+    align-self: end;
+}
+.section1{
+    display: grid;
+    gap: 10px;
+    padding-bottom: 0px;
+}
+
+
+.section1__text{
+    font-family: var(--ff-1);
+    font-size: var(--sub);
+    color: var(--color-dark-75);
+}
+
+
+.section2__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+    font-family: var(--ff-2);
+    
+    
+}
+
+[class^="section2__cards--"]{
+    box-shadow: var(--shadow-1);
+    border-radius: 7px;
+    padding: 40px;
+    display: grid;
+    gap: 30px;
+   
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.amount{
+    font-size: var(--h1);
+    font-weight: bold;
+}
+.time{
+    color: var(--color-dark-75);
+    font-size: var(--body);
+}
+
+.information{
+    color: var(--color-dark-75)
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.bi-check-lg{
+    color: var(--color-green-100);
+}
+
+.btn-black{
+    justify-self: center;
+}
+
+@media(max-width: 1024px){
+    .section2__cards{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px){
+    .section2__cards{
+    grid-template-columns: repeat(1, 0.7fr);
+    justify-content: center;
+    }
+}
+
+@media(max-width: 568px){
+    .section2__cards{
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
